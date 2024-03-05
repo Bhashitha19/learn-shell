@@ -1,6 +1,6 @@
 echo hello world
-Color syntax : echo -e "\e[COLm Message\e[Om"
-#echo -e: -e is used to allow colors
+Color syntax : echo -e "\e[COLm Message \e[Om"
+#echo -e : -e is used to allow colors
 #Double quotes are mandatory, Single quotes can be used but not preferred
 # \e[COLm -> COL is a color code we need to provide
  #RED       - 31
