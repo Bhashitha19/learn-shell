@@ -1,0 +1,5 @@
+sample()
+{
+  echo hello
+}
+sample
