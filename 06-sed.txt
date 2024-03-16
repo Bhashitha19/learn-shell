@@ -1,0 +1,55 @@
+operations
+.........
+
+1. Search & replace
+2. Delete the lines
+3. Add your lines
+4. Replace the lines
+
+sed is editor
+
+Assume we have a file like this
+
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+
+sed 's/nologin/yeslogin/' file
+ s->substitute
+
+ To modify the file, we use -i option to sed command, else it does change only on output
+
+ Assume we have a file like this
+
+ root:x:0:0:root:/root:/bin/bash
+ bin:x:1:1:bin:/bin:/sbin/nologin
+ daemon:x:2:2:daemon:/sbin:/sbin/nologin
+ adm:x:3:4:adm:/var/adm:/sbin/nologin
+
+Replace root with admin
+
+sed 's/root/admin/' file
+
+sed 's/root/admin/g' file
+
+
+Delete lines can happen in two ways
+1. line no
+       sed '2d' file
+2.search a word and delete those lines
+       sed '/yeslogin/ d' file
+
+Add your lines
+1. sed '1 a hello world' file
+2. sed '/bash/a hello world' file
+
+
+Replace lines
+1. sed '1 c hellow world' file
+2. sed '/bash/ c hellow world' file
+
+sed -e '1d' -e '2 a hellow world' file
+-e option is used to enable multiple operations with single sed command
+
+
