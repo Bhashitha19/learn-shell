@@ -14,5 +14,5 @@ done
 
 for fruit in apple banana orange ; do
    echo FRUIT NAME - $fruit
-   sleep1
+   sleep 1
 done
